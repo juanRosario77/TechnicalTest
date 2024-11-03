@@ -68,6 +68,7 @@ Request
   "Email": "Carlos@gmail.com",
   "Password": "Asdf123456"
 }
+```
 
 Response
 
