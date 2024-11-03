@@ -1,0 +1,44 @@
+# .NET 8
+bin/
+obj/
+out/
+project.lock.json
+*.user
+*.suo
+*.sln.docstates
+
+# Visual Studio
+.vscode/
+*.vs/
+*.vscode/
+*.sln.ide/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Rr]eleases/
+[Dd]eploy/
+[Bb]in/
+[Oo]bj/
+[Aa]ssets/
+[Aa]ssets/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+!**/packages/build/PackageReference.props
+!**/packages/build/PackageReference.targets
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/

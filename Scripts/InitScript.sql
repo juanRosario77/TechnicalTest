@@ -1,0 +1,72 @@
+CREATE DATABASE [TechnicalTest];
+
+GO
+
+
+USE [TechnicalTest]
+GO
+
+/****** Object:  Table [dbo].[Users]    Script Date: 11/3/2024 12:04:53 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Users](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](100) NOT NULL,
+	[Email] [nvarchar](255) NOT NULL,
+	[Password] [nvarchar](255) NOT NULL,
+	[Created] [datetime] NOT NULL,
+	[Modified] [datetime] NOT NULL,
+	[LastLogin] [datetime] NOT NULL,
+	[Token] [nvarchar](max) NOT NULL,
+	[IsActive] [bit] NOT NULL,
+ CONSTRAINT [PK__User__3214EC07AA7700D2] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [UQ__User__A9D105347B104FA8] UNIQUE NONCLUSTERED 
+(
+	[Email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF__User__Id__38996AB5]  DEFAULT (newid()) FOR [Id]
+GO
+
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF__User__Created__398D8EEE]  DEFAULT (getdate()) FOR [Created]
+GO
+
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF__User__Modified__3A81B327]  DEFAULT (getdate()) FOR [Modified]
+GO
+
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF__User__LastLogin__3B75D760]  DEFAULT (getdate()) FOR [LastLogin]
+GO
+
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF__User__Token__3C69FB99]  DEFAULT (newid()) FOR [Token]
+GO
+
+ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF__User__IsActive__3D5E1FD2]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Phones](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [uniqueidentifier] NOT NULL,
+	[Number] [int] NOT NULL,
+	[CityCode] [int] NOT NULL,
+	[CountryCode] [int] NOT NULL,
+ CONSTRAINT [PK__Phone__3214EC0740E1BB31] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
