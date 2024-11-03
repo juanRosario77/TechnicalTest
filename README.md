@@ -1,6 +1,6 @@
 # TechnicalTest APP
 
-Este repositorio contiene el proyecto TechnicalTest API, una aplicación web sencilla en .NET 8 que permite el registro y autenticación de usuarios mediante autenticación basada en tokens.
+Este repositorio contiene el proyecto TechnicalTest API, una aplicación web en .NET  8 que permite el registro y autenticación de usuarios mediante autenticación basada en tokens.
 
 ## Instrucciones de Configuración
 
@@ -96,7 +96,7 @@ Response
     }
   },
   "ConnectionStrings": {
-    "DefaultConnection": "Server=DESKTOP-8HN9PD6\\SQLEXPRESS;Database=TechnicalTest;Integrated Security=True;TrustServerCertificate=True;"
+    "DefaultConnection": "Server=.;Database=TechnicalTest;Integrated Security=True;TrustServerCertificate=True;"
   },
   "Validations": {
     "EmailRegex": "[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
@@ -112,6 +112,15 @@ Response
 }
 ```
 
-## General DIagram
+## General Diagram
 ![Logo](https://raw.githubusercontent.com/juanRosario77/TechnicalTest/refs/heads/main/Documentation/TechnicalTest%20APP%20-%20General%20Diagram.png)
+
+
+## Unit test
+![Logo](https://github.com/juanRosario77/TechnicalTest/blob/main/Documentation/UnitTestings-evidencia/UnitTest.JPG?raw=true)
+
+![Logo](https://github.com/juanRosario77/TechnicalTest/blob/main/Documentation/UnitTestings-evidencia/Capture.JPG?raw=true)
+
+![Logo](https://github.com/juanRosario77/TechnicalTest/blob/main/Documentation/UnitTestings-evidencia/Capt2.JPG?raw=true)
+
 
