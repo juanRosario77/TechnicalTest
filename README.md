@@ -1,6 +1,6 @@
 # TechnicalTest APP
 
-Este repositorio contiene el proyecto TechnicalTest API, una aplicación web sencilla en ASP.NET Core que permite el registro y autenticación de usuarios mediante autenticación basada en tokens.
+Este repositorio contiene el proyecto TechnicalTest API, una aplicación web sencilla en .NET 8 que permite el registro y autenticación de usuarios mediante autenticación basada en tokens.
 
 ## Instrucciones de Configuración
 
